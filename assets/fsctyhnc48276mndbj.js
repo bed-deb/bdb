@@ -18,6 +18,7 @@ function sprawdzDane() {
 
     var users = {
         "polak": "418",
+        "Dr$P@r0w_66xZ": "x_Krw@wY.Las3r_7",
         "NebulaX_58zQm!0tFvR1LpW7dJ": "g3#Xpower15!qVz169*Mn@rTc5$YpQwZ1^BjK",
         "kowalski": "5678",
         "admin": "adminpass"
