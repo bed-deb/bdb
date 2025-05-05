@@ -2,7 +2,7 @@ function login() {
         var password = document.getElementById('password').value;
 
         // Tablica przechowująca poprawne hasła
-        var correctPasswords = ["xV7&zHk8R#FGt2PwQwJJf9GtVV7!", "polak"]; // Możesz dodać więcej haseł tutaj
+        var correctPasswords = ["xV7&zHk8R#FGt2PwQwJJf9GtVV7!", "B@z0oK4!rT", "polak"]; // Możesz dodać więcej haseł tutaj
 
         // Sprawdzenie, czy wprowadzone hasło znajduje się w tablicy
         if (password === "") {
