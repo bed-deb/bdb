@@ -18,7 +18,7 @@ function sprawdzDane() {
 
     var users = {
         "polak": "418",
-        "Dr$P@r0w_66xZ": "x_Krw@wY.Las3r_7",
+        "Z9xR_1qT#mL7!vD3": "#G8r@wX1$pQ&zV9*Jf",
         "kowalski": "5678",
         "admin": "adminpass"
     };
