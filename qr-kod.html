@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>mObywatel 2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background: #f5f6fb;
+    color: #131419;
+    height: 100%;
+}
+
+#wyjdz {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            left: 24px;
+            top: 20px;
+            border-radius: 0px;
+            opacity: 1;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+#gora {
+    width: 60px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px; /* wg Axure */
+    color: #1d1d1d;
+    text-align: center;
+    line-height: normal;
+    position: absolute;
+    left: 166px;
+    top: 17px;
+    opacity: 1;
+}
+
+#pokaqr {
+    width: 393px;
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #1d1d1d;
+    text-align: center;
+    line-height: normal;
+    position: absolute;
+    left: 0px;
+    top: 86px;
+    opacity: 1;
+}
+
+#szaro {
+    width: 291px;
+    height: 31px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4a4a4a;
+    text-align: center;
+    line-height: normal;
+    position: absolute;
+    left: 52px;
+    top: 166px;
+    opacity: 1;
+}
+
+#white-background {
+            width: 345px;
+            height: 454px;
+            background-color: #ffffff;
+            position: absolute;
+            left: 24px;
+            top: 229px;
+            border-radius: 16px;
+            opacity: 1;
+            z-index: 5;
+        }
+
+        #qr {
+            width: 298px;
+            height: 298px;
+            background-image: url('assets/dowod_files/kod-qr.png');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 48px;
+            top: 237px;
+            border-radius: 0px;
+            opacity: 1;
+            z-index: 10;
+        }
+
+#kod {
+    width: 281px;
+    height: 87px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    color: #1d1d1d;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: 11px;
+    position: absolute;
+    left: 57px;
+    top: 525px;
+    opacity: 1;
+    z-index: 10;
+}
+
+#wygasa {
+    width: 281px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #4a4a4a;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    position: absolute;
+    left: 52px;
+    top: 628px;
+    opacity: 1;
+    z-index: 10;
+}
+
+#white-belt {
+    width: 265px;
+    height: 4px;
+    background-color: #eaedf1;
+    border-radius: 5px;
+    position: absolute;
+    left: 66px;
+    top: 608px;
+    opacity: 1;
+    z-index: 10;
+}
+
+#blue-belt {
+    width: 265px;
+    height: 4px;
+    background-color: #0052a5;
+    border-radius: 5px;
+    position: absolute;
+    left: 66px;
+    top: 608px;
+    opacity: 1;
+    z-index: 10;
+    transform-origin: right; /* tutaj zmiana na right */
+    transform: scaleX(1);
+    transition: transform linear;
+}
+
+#white-box {
+            width: 345px;
+            height: 72px;
+            background-color: #ffffff;
+            position: absolute;
+            left: 24px;
+            top: 699px;
+            border-radius: 16px;
+            opacity: 1;
+            z-index: 10;
+}
+
+#flaga {
+            width: 55px;
+            height: 36px;
+            background-image: url('assets/dowod_files/pl.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 112px;
+            top: 717px;
+            border-radius: 0px;
+            opacity: 1;
+            z-index: 20;
+        }
+
+       #orzel {
+    width: 35px;
+    height: autopx;
+    position: absolute;
+    left: 226px;
+    top: 712px;
+    border-radius: 0px;
+    opacity: 1;
+    z-index: 20;
+}
+
+#orzel img {
+    width: 100%;
+    height: auto; /* zachowuje proporcje */
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Kod QR -->
+
+
+<div id="gora">Kod QR</div>
+
+<!-- Pokaż QR -->
+
+
+<div id="pokaqr">Pokaż kod QR osobie, której dokument sprawdzasz</div>
+
+<!-- Gdy zeskanuje kod -->
+
+<div id="szaro">Gdy ta osoba zeskanuje lub przepisze kod, zobaczysz jej dane na swoim telefonie.</div>
+
+<!-- Kod -->
+
+<div id="kod">251 483</div>
+
+<!-- Wygasa -->
+
+<div id="wygasa">Kod wygaśnie za: 3 min.</div>
+
+<!-- Przycisk "wyjdź" -->
+<div id="wyjdz" onclick="window.location.href='qr.html'">
+    <img src="assets/dowod_files/wyjdz.svg"
+    alt="Wyjdz" style="">
+</div>
+
+<!-- Duża ramka -->
+<div id="white-background"></div>
+
+<!-- QR -->
+<div id="qr"></div>
+
+<!-- Pasek od timera (bez img) -->
+
+<div id="white-belt"></div>
+
+<!-- Drugi pasek od timera -->
+
+<div id="blue-belt"></div>
+
+<!-- White-box -->
+
+<div id="white-box"></div>
+
+<!-- Flaga -->
+
+<div id="flaga"></div>
+
+<!-- Orzeł -->
+
+<div id="orzel">
+   <img src="assets/dowod_files/godlo.gif" alt="Orzeł">
+</div>
+
+
+<script>
+const durationSec = 180; // 3 minuty
+const wygasa = document.getElementById('wygasa');
+const blueBelt = document.getElementById('blue-belt');
+const whiteBelt = document.getElementById('white-belt');
+
+let startTime = null;
+const beltMaxWidth = whiteBelt.offsetWidth;
+
+function formatTime(sec) {
+    if (sec === durationSec) return `Kod wygaśnie za: 3 min.`;
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return `Kod wygaśnie za: ${m} min ${s} sek.`;
+}
+
+function animate() {
+    const now = Date.now();
+    if (!startTime) startTime = now;
+    const elapsed = (now - startTime) / 1000;
+    const timeLeft = Math.max(durationSec - elapsed, 0);
+
+    // Aktualizacja tekstu
+    wygasa.textContent = formatTime(Math.floor(timeLeft));
+
+    // Obliczenie szerokości paska
+    const progress = timeLeft / durationSec;
+    blueBelt.style.width = (beltMaxWidth * progress) + 'px';
+
+    if (timeLeft > 0) {
+        requestAnimationFrame(animate);
+    } else {
+        wygasa.textContent = 'Kod wygasł';
+        blueBelt.style.width = '0px';
+    }
+}
+
+// Inicjalizacja
+blueBelt.style.transition = 'width 0.1s linear';
+blueBelt.style.width = beltMaxWidth + 'px';
+
+requestAnimationFrame(animate);
+</script>
+
+
+
+
+</body>
+</html>
