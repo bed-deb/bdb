@@ -9,9 +9,10 @@ function login() {
             alert("Proszę wprowadzić hasło.");
         } else if (correctPasswords.includes(password)) {
             // Jeśli hasło jest poprawne, przekierowanie na stronę
-            window.location.href = 'dashboard.html';
+            window.location.href = 'info.html';
         } else {
             // Jeśli hasło jest niepoprawne
             alert("Niepoprawne hasło.");
         }
     }
+
